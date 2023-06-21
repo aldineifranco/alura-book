@@ -12,6 +12,7 @@ const ContainerLogo = styled.div`
   }
 `;
 
+
 export function Logo() {
   return (
     <ContainerLogo>

@@ -1,4 +1,4 @@
-import { Logo } from '../logo';
+import { Logo } from '../Logo';
 import { OpcoesHeader } from "../OpcoesHeader";
 import { OpcoesIcones } from "../OpcoesIcones";
 import styled from "styled-components";
