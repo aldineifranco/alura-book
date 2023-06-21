@@ -74,7 +74,7 @@ export function Pesquisa() {
       <Input
         type="text"
         placeholder="Escreva sua própria leitura"
-        onBlur={(evento) => {
+        onKeyUp={(evento) => {
           const textoDigitado =
             evento.target.value;
           const filtroLivros = livros.filter(

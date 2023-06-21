@@ -1,10 +1,11 @@
 import { Header } from "./componentes/Header";
 import { Pesquisa } from "./componentes/Pesquisa";
+import { UltimosLancamentos } from "./componentes/UltimosLancamentos";
 import styled from 'styled-components';
 
 const AppContainer = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-image: linear-gradient(
       90deg,
       #002f52 5%,
@@ -17,6 +18,7 @@ function App() {
     <AppContainer className="App">
       <Header />
       <Pesquisa />
+      <UltimosLancamentos />
     </AppContainer>
   );
 }
