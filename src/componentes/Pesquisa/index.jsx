@@ -35,13 +35,35 @@ const Subtitulo = styled.h3`
   margin-bottom: 40px;
 `;
 
+const ContainerLivro = styled.div`
+  display: flex;
+
+`;
+
+const Livro = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    width: 200px;
+  }
+  img {
+    width: 100px;
+  }
+  &:hover {
+    border: 1px solid white;
+  }
+`;
+
 export function Pesquisa() {
   const [
     livrosPesquisados,
     setLivrosPesquisados,
   ] = useState([]);
-
-  console.log(livrosPesquisados);
 
   return (
     <PesquisaContainer>
@@ -65,6 +87,15 @@ export function Pesquisa() {
           setLivrosPesquisados(filtroLivros);
         }}
       />
+
+      <ContainerLivro>
+        {livrosPesquisados.map((livro) => (
+          <Livro>
+            <p>{livro.nome}</p>
+            <img src={livro.src} />
+          </Livro>
+        ))}
+      </ContainerLivro>
     </PesquisaContainer>
   );
 }
