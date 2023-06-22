@@ -2,6 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { createGlobalStyle } from "styled-components";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import { Header } from "./componentes/Header";
+import { Favoritos } from "./pages/Favoritos";
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -144,6 +152,17 @@ ReactDOM.createRoot(
 ).render(
   <React.StrictMode>
     <GlobalStyle />
-    <App />
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route 
+          path="/" 
+          element={<App />} />
+        <Route
+          path="/favoritos"
+          element={<Favoritos />}
+        />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
